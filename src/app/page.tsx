@@ -22,8 +22,6 @@ export default function Home() {
   return (
     <>
       <main className="hero" >
-        {/* NAO LEMBRO EXATAMENTE O QUE UE TAVA FAZENDO AQUI */}
-      {/* <button className="switchMode" onClick={teste}><Image src="../assets/sun.svg" width={100} height={100} placeholder="empty" alt="teste" tabIndex={-1}></Image></button> */}
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
           <h1 className="wordmark">Paulo Leal Muller</h1>

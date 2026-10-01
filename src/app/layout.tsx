@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Paulo Leal Muller",
-  description: "portfolio",
+  description: "mini-portfolio",
 };
 
 export default function RootLayout({
