@@ -7,6 +7,7 @@ export default function Home() {
   gsap.registerPlugin(useGSAP);
 
   const buttonRef = useRef(null);
+  const buttonRefLinkedin = useRef(null);
 
   const { contextSafe } = useGSAP()
 
@@ -16,6 +17,12 @@ export default function Home() {
       scale: 1,
       duration: 1,
       overwrite: "auto"
+    })
+  })
+
+    const butaoLinkedin = contextSafe(() => {
+    gsap.to(buttonRefLinkedin.current, {
+      
     })
   })
   
@@ -31,7 +38,16 @@ export default function Home() {
               target="_blank"
               className="cta-outline">
               GitHub
-            </a><button
+            </a>
+            <a
+              href="https://www.linkedin.com/in/totalo/"
+              target="_blank"
+              className="cta-outline3"
+              ref={buttonRef}
+              onClick={butao}>
+              Linkedin
+            </a>
+            <button
               className="cta-outline2"
               ref={buttonRef}
               onClick={butao}

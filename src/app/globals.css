@@ -130,3 +130,28 @@ button {
     cursor: default;
   }
 }
+
+.cta-outline3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: rgba(63, 186, 235, 0.2);
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+  user-select: none;
+  color: white;
+
+  &:hover {
+    border-color: #333850;
+    background: #10121c;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: rgba(7, 0, 7, 0.4);
+    cursor: default;
+  }
+}
