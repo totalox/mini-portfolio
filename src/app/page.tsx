@@ -17,7 +17,6 @@ export default function Home() {
 
   return (
     <>
-    
       <main className="hero">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
