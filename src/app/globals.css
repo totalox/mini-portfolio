@@ -76,7 +76,7 @@ button {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-family: "Playwrite NG Modern";
   &::selection {
     background-color: yellow;

@@ -2,8 +2,6 @@
 
 - Builded with [Emptxyz-cli](https://emptyxz.dev/)
 
-If you curious, see more about me in [linkedin](https://www.linkedin.com/in/totalo).
+If you curious, see more about me in [totalo.fun](https://totalo.fun/).
 
-##### Original README.md of NextJS
-
-[NextJS README.md](./src/docs/README-NEXT.md)
+Click Here for see the original README.md of NextJS: [NextJS README.md](./src/docs/README-NEXT.md)
