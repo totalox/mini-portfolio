@@ -2,6 +2,7 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Howl } from "howler";
 
 export default function Home() {
   const { contextSafe } = useGSAP();
@@ -17,6 +18,30 @@ export default function Home() {
     });
   });
 
+  const animSoundPa = () => {
+    const sound = new Howl({
+      src: ["/sounds/pa.mp3"],
+    });
+    sound.play();
+    butao();
+  };
+
+  const animSoundPo = () => {
+    const sound = new Howl({
+      src: ["/sounds/po.mp3"],
+    });
+    sound.play();
+    butao();
+  };
+
+  const animSoundPu = () => {
+    const sound = new Howl({
+      src: ["/sounds/pupu.mp3"],
+    });
+    sound.play();
+    butao();
+  };
+
   useEffect(() => {
     gsap.to(containerAnim.current, {
       opacity: 1,
@@ -24,25 +49,6 @@ export default function Home() {
       duration: 1,
     });
   }, []);
-
-  const audioPa = () => {
-    const music = new Audio("/sounds/pa.mp3");
-
-    music.play();
-    butao();
-  };
-
-  const audioPo = () => {
-    const music = new Audio("/sounds/po.mp3");
-
-    music.play();
-  };
-
-  const audioPupu = () => {
-    const music = new Audio("/sounds/pupu.mp3");
-
-    music.play();
-  };
 
   return (
     <>
@@ -56,7 +62,7 @@ export default function Home() {
                 href="https://github.com/totalox"
                 target="_blank"
                 className="cta-outline"
-                onClick={audioPupu}
+                onClick={animSoundPu}
               >
                 GitHub
               </a>
@@ -65,14 +71,14 @@ export default function Home() {
                 target="_blank"
                 className="cta-outline3"
                 ref={buttonRef}
-                onClick={audioPo}
+                onClick={animSoundPo}
               >
                 Linkedin
               </a>
               <button
                 className="cta-outline2"
                 ref={buttonRef}
-                onClick={audioPa}
+                onClick={animSoundPa}
               >
                 Click
               </button>
