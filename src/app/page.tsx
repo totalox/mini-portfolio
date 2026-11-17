@@ -4,8 +4,10 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 export default function Home() {
-  const buttonRef = useRef(null);
   const { contextSafe } = useGSAP();
+  const buttonRef = useRef(null);
+  const containerAnim = useRef(null);
+
   const butao = contextSafe(() => {
     gsap.to(buttonRef.current, {
       rotation: "+=360",
@@ -15,15 +17,32 @@ export default function Home() {
     });
   });
 
-  const containerAnim = useRef(null);
-
   useEffect(() => {
     gsap.to(containerAnim.current, {
       opacity: 1,
-      scale: 3,
+      scale: 2,
       duration: 1,
     });
   }, []);
+
+  const audioPa = () => {
+    const music = new Audio("/sounds/pa.mp3");
+
+    music.play();
+    butao();
+  };
+
+  const audioPo = () => {
+    const music = new Audio("/sounds/po.mp3");
+
+    music.play();
+  };
+
+  const audioPupu = () => {
+    const music = new Audio("/sounds/pupu.mp3");
+
+    music.play();
+  };
 
   return (
     <>
@@ -37,6 +56,7 @@ export default function Home() {
                 href="https://github.com/totalox"
                 target="_blank"
                 className="cta-outline"
+                onClick={audioPupu}
               >
                 GitHub
               </a>
@@ -45,11 +65,15 @@ export default function Home() {
                 target="_blank"
                 className="cta-outline3"
                 ref={buttonRef}
-                onClick={butao}
+                onClick={audioPo}
               >
                 Linkedin
               </a>
-              <button className="cta-outline2" ref={buttonRef} onClick={butao}>
+              <button
+                className="cta-outline2"
+                ref={buttonRef}
+                onClick={audioPa}
+              >
                 Click
               </button>
             </div>
